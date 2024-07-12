@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button id="login-button">Login</button>
+        <footer>
+            <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+        </footer>
+    </div>
+    <div class="container" id="register-container" style="display:none;">
+        <h2>Register</h2>
+        <input type="text" id="register-username" placeholder="Username" required>
+        <input type="email" id="register-email" placeholder="Email" required>
+        <input type="password" id="register-password" placeholder="Password" required>
+        <button id="register-button">Register</button>
+        <footer>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </footer>
+    </div>
+    <div class="container" id="chat-container" style="display:none;">
+        <h2>Chat Room</h2>
+        <div id="chat-box"></div>
+        <input type="text" id="message" placeholder="Type a message">
+        <button id="send-button">Send</button>
+        <button id="logout-button">Logout</button>
+    </div>
+    <!-- <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
